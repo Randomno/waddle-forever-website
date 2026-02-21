@@ -1,0 +1,83 @@
+@import 'tailwindcss';
+
+@media (prefers-color-scheme: dark) {
+
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@utility button {
+  @apply 
+  text-white 
+  bg-[#0280cd] 
+  hover:bg-[#0056a6]
+  active:bg-[#00ccff]
+  focus:outline-none
+  text-center 
+  p-1.25 m-1 
+  border-none 
+  rounded-lg 
+  cursor-pointer 
+  no-underline
+  font-bold 
+  text-base 
+  min-w-22.5;
+  box-shadow: 
+    0px 0.3px 0 1.5px #003366,
+    -0.9px -0.9px 0 1.3px #00529B,
+    1.2px 1.2px 0 1.3px #00ccff,
+    inset 1px 0 0 0 #00ccff;
+}
+
+@layer base {
+  h1 {
+    @apply text-4xl font-bold mb-6; 
+  }
+
+  h2 {
+    @apply text-3xl font-semibold;
+  }
+
+  h3 {
+    @apply text-2xl font-semibold;
+  }
+
+  p {
+    @apply text-lg mt-2 text-white;
+  }
+
+  a {
+    @apply underline hover:text-blue-200;
+  }
+
+  header a {
+    @apply no-underline
+  }
+
+  .md-viewer img {
+    @apply my-5
+  }
+
+  .md-viewer p {
+    @apply text-lg mb-5 text-white;
+  }
+
+  pre {
+    @apply text-gray-300 text-sm bg-black/50 rounded-md p-4 my-4 overflow-auto;
+  }
+
+  code {
+    @apply text-sm font-mono bg-[#f4f4ff26] px-1 py-0.75 rounded-sm;
+  }
+
+  pre code {
+    all: unset;
+    display: inline-block;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+}

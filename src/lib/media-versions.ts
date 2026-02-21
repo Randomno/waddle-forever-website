@@ -1,4 +1,4 @@
-import { VersionLabel } from "./version";
+import { VersionLabel } from './version';
 
 /** This array of version strings is used to define all versions in which a media was updated */
 type MediaUpdateVersions = Array<string>;

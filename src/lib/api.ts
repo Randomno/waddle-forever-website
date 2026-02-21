@@ -1,8 +1,8 @@
-import { z } from "zod"
-import { ErrorResponse } from "./res"
+import { z } from 'zod'
+import { ErrorResponse } from './res'
 
 export function createJsonPost(callback: (body: any) => Promise<Response>) {
-  return async (request: Request) => {
+  return async ({ request }: { request: Request }) => {
     let body
     try {
       body = await request.json()
