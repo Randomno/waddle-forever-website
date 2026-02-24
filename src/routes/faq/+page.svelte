@@ -61,10 +61,10 @@
       items: [
         {
           question: "Is <feature> planned?",
-          answer: "If it was in the original browser version of Club Penguin, then almost certainly yes. Supporting mobile Club Penguin would be an entirely different project. Adding features from CPPSs is not planned, but anyone is welcome to fork the project."
+          answer: "If it was in the original browser version of Club Penguin, then almost certainly yes. Supporting the app version of Club Penguin would be an entirely different project. Adding features from CPPSs is not planned, but anyone is welcome to fork the project."
         },
         {
-          question: "Will mobile be supported?",
+          question: "Will a mobile client be supported?",
           answer: "Flash Player was never well-supported on mobile, so it's unlikely at this time."
         }
       ]
