@@ -7,13 +7,14 @@
   interface NavLink {
     href: string;
     label: string;
+    image?: string;
   }
 
   const navLinks: NavLink[] = [
     { href: '/faq', label: 'FAQ' },
     { href: '/mods', label: 'Mods' },
-    { href: 'https://github.com/nhaar/Waddle-Forever', label: 'GitHub' },
-    { href: 'https://discord.gg/URHXm3cFv5', label: 'Discord' },
+    { href: 'https://github.com/nhaar/Waddle-Forever', label: 'GitHub', image: '/github.svg' },
+    { href: 'https://discord.gg/URHXm3cFv5', label: 'Discord', image: '/discord.svg' },
   ];
 
   const linkClass =
@@ -30,7 +31,7 @@
 
 <header class="bg-[#0280CD] border-b-2 border-[#003366] shadow-[0_0_0_2px_#fff,0_0_0_4px_#ffffff80,inset_0_-2px_0_0_#00529B] text-white p-3">
   <nav class="max-w-6xl mx-auto">
-    <div class="flex items-center justify-between">
+    <div class="flex justify-between">
       <a href="/">
         <span class="text-5xl font-bold hover:text-blue-200">
           <!-- Logo Placeholder -->
@@ -39,9 +40,13 @@
       </a>
 
       <!-- Desktop Menu -->
-      <div class="hidden md:flex md:space-x-16">
-        {#each navLinks as { href, label }, index (index)}
-          <a {href} class={linkClass}>{label}</a>
+      <div class="hidden md:flex md:space-x-12 items-center">
+        {#each navLinks as link}
+          {#if link.image}
+            <a href={link.href}><img src={link.image} width="60" alt={link.label}></a>
+          {:else}
+            <a href={link.href} class={linkClass}>{link.label}</a>
+          {/if}
         {/each}
       </div>
 
